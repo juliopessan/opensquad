@@ -1,0 +1,47 @@
+{
+  "squad": "sustainable-packaging-linkedin",
+  "status": "running",
+  "step": {
+    "current": 1,
+    "total": 4,
+    "label": "Strategist — Define content strategy"
+  },
+  "agents": [
+    {
+      "id": "strategist",
+      "name": "Strategist",
+      "icon": "🎯",
+      "status": "working",
+      "deliverTo": null,
+      "desk": {
+        "col": 1,
+        "row": 1
+      }
+    },
+    {
+      "id": "creator",
+      "name": "Creator",
+      "icon": "✍️",
+      "status": "idle",
+      "deliverTo": null,
+      "desk": {
+        "col": 2,
+        "row": 1
+      }
+    },
+    {
+      "id": "reviewer",
+      "name": "Reviewer",
+      "icon": "👁️",
+      "status": "idle",
+      "deliverTo": null,
+      "desk": {
+        "col": 3,
+        "row": 1
+      }
+    }
+  ],
+  "handoff": null,
+  "startedAt": "2026-03-18T00:34:58Z",
+  "updatedAt": "2026-03-18T00:34:58Z"
+}
