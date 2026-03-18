@@ -2,16 +2,16 @@
   "squad": "sustainable-packaging-linkedin",
   "status": "running",
   "step": {
-    "current": 1,
+    "current": 2,
     "total": 4,
-    "label": "Strategist — Define content strategy"
+    "label": "Creator — Write LinkedIn carousel post"
   },
   "agents": [
     {
       "id": "strategist",
       "name": "Strategist",
       "icon": "🎯",
-      "status": "working",
+      "status": "done",
       "deliverTo": null,
       "desk": {
         "col": 1,
@@ -22,7 +22,7 @@
       "id": "creator",
       "name": "Creator",
       "icon": "✍️",
-      "status": "idle",
+      "status": "working",
       "deliverTo": null,
       "desk": {
         "col": 2,
@@ -41,7 +41,12 @@
       }
     }
   ],
-  "handoff": null,
+  "handoff": {
+    "from": "strategist",
+    "to": "creator",
+    "message": "Estratégia de carousel myth-busting sobre sustainable packaging costs para Operations Directors definida. Pronto para escrita.",
+    "completedAt": "2026-03-18T00:35:30Z"
+  },
   "startedAt": "2026-03-18T00:34:58Z",
-  "updatedAt": "2026-03-18T00:34:58Z"
+  "updatedAt": "2026-03-18T00:35:35Z"
 }
