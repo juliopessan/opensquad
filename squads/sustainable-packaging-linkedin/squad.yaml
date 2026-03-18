@@ -1,0 +1,86 @@
+name: Sustainable Packaging LinkedIn Strategy
+code: sustainable-packaging-linkedin
+description: |
+  Multi-agent squad para criar posts e artigos LinkedIn sobre sustainable packaging,
+  brand recognition e engagement com decision makers (CPO, Operations, Procurement).
+
+  Performance: Econômico (pipeline enxuto com análise básica e revisão leve)
+  Formatos: LinkedIn Post + LinkedIn Article (ocasional)
+  Público: Clientes de concorrentes, empresas packaging, decision makers, influenciadores
+
+company_context: Decpack - especializada em design inteligente, personalização e agilidade em packaging personalizadas
+created: 2026-03-18
+language: pt-BR
+
+pipeline:
+  - step: 1
+    agent: Strategist
+    task: strategy_definition
+    description: Definir ângulo, narrativa, hook e estrutura para o post/artigo
+    inputs:
+      - company_context
+      - content_format (post|article)
+      - target_audience
+    outputs:
+      - content_strategy.md
+      - hook_suggestion
+      - narrative_angle
+      - target_role_cta
+    timing: "executes_once_or_on_request"
+    checkpoint: false
+
+  - step: 2
+    agent: Creator
+    task: content_creation
+    description: Escrever post LinkedIn (1,300-1,600 chars) e/ou artigo
+    inputs:
+      - content_strategy.md
+      - company_context
+      - research_findings
+    outputs:
+      - post_draft.md
+      - article_draft.md (if applicable)
+    timing: "after_step_1"
+    checkpoint: false
+
+  - step: 3
+    agent: Reviewer
+    task: quality_assurance
+    description: QA final - marca alignment, ton, factualidade, CTAs
+    inputs:
+      - post_draft.md
+      - article_draft.md
+    outputs:
+      - final_content.md
+      - approval_status (approved|needs_revision)
+      - feedback (if needs_revision)
+    timing: "after_step_2"
+    checkpoint: true
+    approval_required: true
+
+  - step: 4
+    task: output_delivery
+    description: Conteúdo pronto para publicar no LinkedIn
+    outputs:
+      - linkedin_ready_posts/
+      - linkedin_ready_articles/
+    timing: "after_step_3_approval"
+    checkpoint: false
+
+research_context:
+  - domain: "LinkedIn content marketing - hooks, dwell time, carousel strategies"
+  - domain: "Sustainable packaging narratives - cost-benefit, greenwashing, trust"
+  - domain: "B2B sales psychology - decision units, role-specific messaging"
+  - domain: "Brand positioning - thought leadership, authority, differentiation"
+
+best_practices_applied:
+  - linkedin-post.md
+  - linkedin-article.md
+  - copywriting.md
+  - review.md
+
+notes: |
+  Econômico: Pipeline simples, single-pass creation, lightweight review.
+  Foco em posts curtos (carousels) com hooks fortes nos 210-235 primeiros caracteres.
+  Role-specific CTAs (demo, consulta, case study, ROI calculator).
+  Voz autêntica e pessoal, não corporate.
