@@ -1,0 +1,115 @@
+---
+# Growth Hacking DecPack Squad
+# Multi-agent pipeline for growth, brand recognition, and sales-focused messaging
+# Created: 2026-03-24
+# Language: Português (Brasil)
+
+squad:
+  id: growth-hacking-decpack
+  name: Growth Hacking DecPack
+  description: |
+    Squad especializado em estratégia de growth hacking, reconhecimento de marca
+    e criação de copy de vendas para DecPack Embalagens.
+
+    Objetivo: Identificar oportunidades de crescimento, definir estratégia de positioning
+    baseada em psicologia de compra, e gerar copy persuasivo para múltiplos canais.
+
+  company: DecPack Embalagens
+  created_at: 2026-03-24
+  language: pt-BR
+  performance_mode: econômico
+
+  metadata:
+    author: Arquiteto
+    purpose: Growth Hacking + Brand Recognition
+    target_audience: B2B (delivery, varejo, indústria, e-commerce)
+    main_channels: Email, LinkedIn, Landing Pages, Social Media
+    research_focus: |
+      Growth Hacking strategies para embalagens customizadas,
+      psicologia de branding e reconhecimento de marca,
+      B2B copywriting e psychology de vendas,
+      Estratégia de engajamento B2B em social media.
+
+  investigation:
+    enriched: false
+    reference_profiles:
+      - name: Sache Pharma
+        url: https://www.sachepharma.com/
+        purpose: Análise de branding e website design
+    date: 2026-03-24
+
+  pipeline:
+    - step_id: 01-research-growth
+      name: "Pesquisa de Oportunidades de Growth"
+      type: research
+      agent: pesquisadora-petra
+      description: |
+        Analisar mercado de embalagens, identificar lacunas de branding,
+        padrões de concorrência, oportunidades de positioning.
+      inputs:
+        - market_segment: "Delivery, Varejo, Indústria, E-commerce"
+        - company_focus: "Embalagens customizadas com design inteligente"
+      outputFile: squads/growth-hacking-decpack/output/01-growth-research.md
+
+    - step_id: 02-strategy-definition
+      name: "Definição de Estratégia de Growth"
+      type: inline
+      agent: estrategia-sofia
+      description: |
+        Definir estratégia de channels, messaging angles, positioning baseado
+        em psicologia de compra B2B.
+      dependencies:
+        - 01-research-growth
+      outputFile: squads/growth-hacking-decpack/output/02-growth-strategy.md
+
+    - step_id: 03-copy-creation
+      name: "Criação de Copy de Vendas"
+      type: inline
+      agent: copia-clara
+      description: |
+        Criar copy persuasivo para email, LinkedIn, landing pages focado
+        em conversão e brand recognition.
+      dependencies:
+        - 02-strategy-definition
+      outputFile: squads/growth-hacking-decpack/output/03-sales-copy.md
+
+    - step_id: 04-quality-review
+      name: "Revisão de Qualidade"
+      type: inline
+      agent: revisora-rita
+      description: |
+        Validar qualidade, coerência de brand, potencial de conversão.
+      dependencies:
+        - 03-copy-creation
+      outputFile: squads/growth-hacking-decpack/output/04-quality-review.md
+      on_reject: 03-copy-creation
+
+agents:
+  - id: pesquisadora-petra
+    name: Pesquisadora Petra
+    icon: 🔍
+    role: growth-researcher
+
+  - id: estrategia-sofia
+    name: Estratégia Sofia
+    icon: 💡
+    role: growth-strategist
+
+  - id: copia-clara
+    name: Cópia Clara
+    icon: ✍️
+    role: copywriter
+
+  - id: revisora-rita
+    name: Revisora Rita
+    icon: ✅
+    role: reviewer
+
+skills: []
+
+tags:
+  - growth-hacking
+  - branding
+  - b2b-sales
+  - copywriting
+  - packaging-industry

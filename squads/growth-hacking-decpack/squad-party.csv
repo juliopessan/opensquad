@@ -1,0 +1,5 @@
+agent_id,agent_name,icon,role,file_path
+pesquisadora-petra,Pesquisadora Petra,🔍,growth-researcher,agents/pesquisadora-petra.agent.md
+estrategia-sofia,Estratégia Sofia,💡,growth-strategist,agents/estrategia-sofia.agent.md
+copia-clara,Cópia Clara,✍️,copywriter,agents/copia-clara.agent.md
+revisora-rita,Revisora Rita,✅,reviewer,agents/revisora-rita.agent.md
