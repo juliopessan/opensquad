@@ -51,9 +51,9 @@ Before starting execution:
         - `name`: use the `displayName` column
         - `icon`: use the `icon` column
      b. Assign desk positions by agent order (0-based index):
-        - `col = (index % 3) + 1`
-        - `row = floor(index / 3) + 1`
-        (index 0 → col:1 row:1, index 1 → col:2 row:1, index 2 → col:3 row:1, index 3 → col:1 row:2, etc.)
+        - `col = (index % 2) + 1`
+        - `row = floor(index / 2) + 1`
+        (index 0 → col:1 row:1, index 1 → col:2 row:1, index 2 → col:1 row:2, etc.)
      c. Read `squads/{name}/squad.yaml` — count items in `pipeline.steps` for `total`
      d. Write `squads/{name}/state.json` with the Write tool:
         ```json
